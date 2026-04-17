@@ -1,0 +1,20 @@
+[
+  {
+    "source": "The quarterly financial report for TechNova indicates revenue of $2500M, representing a 15% increase year over year. Operating expenses increased to $1200M. Net income was $450M. The board approved a dividend of $2.50 per share. Management projects continued growth in the coming quarters driven by AI integration.",
+    "greedy_output": "Technova reported hit.9m revenue, increase increase.2 yoy with 754 operating margin.",
+    "beam_output": "Technova reported hit.9m revenue, increase increase growth yoy with.7 operating margin.",
+    "beam_score": -0.362209466217524
+  },
+  {
+    "source": "The ProMax X1 by CloudPeak features a 8-core processor, 6000mAh battery, and AI-powered assistant. It is designed for professionals who need high performance computing. Available in Black, Silver, and Blue, the device weighs 195g and includes fast charging and biometric auth. Pricing starts at $999.",
+    "greedy_output": "New promax x1 by cloudpeak processor 8-core processor battery launching from at.",
+    "beam_output": "New promax x1 by cloudpeak processor 8-core 6000mah battery launching from at.",
+    "beam_score": -0.256069343816489
+  },
+  {
+    "source": "This study examines the relationship between remote work frequency and productivity using a dataset of 5000 observations from Fortune 500 companies. We employ regression analysis to analyze temporal patterns. Results indicate a strong positive correlation (p < 0.001). The findings suggest that targeted interventions improve outcomes.",
+    "greedy_output": "Study finds for positive correlation between remote work frequency and productivity p 0.001 using regression analysis.",
+    "beam_output": "Study finds for positive correlation between remote work frequency and productivity p 0.001 using regression analysis.",
+    "beam_score": -0.2040486462879926
+  }
+]

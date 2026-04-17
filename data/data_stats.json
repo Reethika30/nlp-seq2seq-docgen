@@ -1,0 +1,9 @@
+{
+  "num_pairs": 5000,
+  "src_vocab_size": 615,
+  "tgt_vocab_size": 285,
+  "avg_src_len": 59.2018,
+  "avg_tgt_len": 18.3858,
+  "max_src_len": 70,
+  "max_tgt_len": 26
+}

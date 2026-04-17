@@ -1,0 +1,28 @@
+# Model checkpoints (regenerable, large binaries)
+*.pt
+*.pth
+*.ckpt
+models/
+
+# Processed data (regenerable)
+data/*.pkl
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

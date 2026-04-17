@@ -1,0 +1,21 @@
+{
+  "num_pairs": 5000,
+  "max_src_len": 150,
+  "max_tgt_len": 60,
+  "min_freq": 2,
+  "max_vocab_size": 8000,
+  "train_split": 0.85,
+  "batch_size": 32,
+  "embed_dim": 256,
+  "hidden_dim": 256,
+  "attention_dim": 128,
+  "n_layers": 2,
+  "dropout": 0.3,
+  "epochs": 15,
+  "learning_rate": 0.001,
+  "weight_decay": 1e-05,
+  "grad_clip": 1.0,
+  "teacher_forcing_start": 1.0,
+  "teacher_forcing_end": 0.3,
+  "lr_patience": 3
+}
