@@ -2,7 +2,9 @@
 
 ## Seq2Seq Neural Network with Bahdanau Attention
 
-![Python](https://img.shields.io/badge/Python-3.14-blue) ![PyTorch](https://img.shields.io/badge/PyTorch-2.11-red) ![Gradio](https://img.shields.io/badge/Gradio-6.12-orange) ![License](https://img.shields.io/badge/License-MIT-green)
+![Python](https://img.shields.io/badge/Python-3.14-blue) ![PyTorch](https://img.shields.io/badge/PyTorch-2.11-red) ![Gradio](https://img.shields.io/badge/Gradio-6.12-orange) [![HF Space](https://img.shields.io/badge/🤗%20Hugging%20Face-Live%20Demo-yellow)](https://huggingface.co/spaces/Reethika30/seq2seq-docgen) ![License](https://img.shields.io/badge/License-MIT-green)
+
+**🚀 Try the live demo:** https://huggingface.co/spaces/Reethika30/seq2seq-docgen
 
 Engineered a complete data preprocessing pipeline and encoder-decoder architecture for automated document generation. The system ingests unstructured text data, tokenizes it into training pairs, and trains a Seq2Seq model with Bahdanau (additive) attention to generate concise document summaries from verbose source material.
 
@@ -10,11 +12,12 @@ Engineered a complete data preprocessing pipeline and encoder-decoder architectu
 
 ## Live Demo
 
-Three ways to see the model working end-to-end:
+Four ways to see the model working end-to-end:
 
 | Option | What you get | How to run |
 |--------|--------------|-----------|
-| **Gradio Web App** | Interactive UI with text input, decoding options, and attention heatmap | `python app.py` then open `http://localhost:7860` |
+| **🤗 HuggingFace Space** | Public URL, zero setup | [**Open Live Demo**](https://huggingface.co/spaces/Reethika30/seq2seq-docgen) |
+| **Gradio Web App** | Local UI with text input, decoding options, attention heatmap | `python app.py` → `http://localhost:7860` |
 | **Jupyter Notebook** | Executed notebook with rendered outputs and attention heatmaps — viewable directly on GitHub | Open [`demo.ipynb`](demo.ipynb) |
 | **CLI Inference** | Quick command-line generation from a trained checkpoint | `python run_inference.py` |
 
