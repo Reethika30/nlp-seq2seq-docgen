@@ -2,7 +2,60 @@
 
 ## Seq2Seq Neural Network with Bahdanau Attention
 
+![Python](https://img.shields.io/badge/Python-3.14-blue) ![PyTorch](https://img.shields.io/badge/PyTorch-2.11-red) ![Gradio](https://img.shields.io/badge/Gradio-6.12-orange) ![License](https://img.shields.io/badge/License-MIT-green)
+
 Engineered a complete data preprocessing pipeline and encoder-decoder architecture for automated document generation. The system ingests unstructured text data, tokenizes it into training pairs, and trains a Seq2Seq model with Bahdanau (additive) attention to generate concise document summaries from verbose source material.
+
+---
+
+## Live Demo
+
+Three ways to see the model working end-to-end:
+
+| Option | What you get | How to run |
+|--------|--------------|-----------|
+| **Gradio Web App** | Interactive UI with text input, decoding options, and attention heatmap | `python app.py` then open `http://localhost:7860` |
+| **Jupyter Notebook** | Executed notebook with rendered outputs and attention heatmaps — viewable directly on GitHub | Open [`demo.ipynb`](demo.ipynb) |
+| **CLI Inference** | Quick command-line generation from a trained checkpoint | `python run_inference.py` |
+
+### Training Results
+
+Model converged cleanly over 15 epochs on CPU. Teacher-forcing ratio was annealed from 1.0 → 0.3 to reduce exposure bias.
+
+![Training Curves](assets/loss_curves.png)
+
+| Metric | Value |
+|--------|-------|
+| Best Val Loss | **2.2062** |
+| Best Val Perplexity | **9.08** |
+| Training Pairs | 5,000 |
+| Epochs | 15 |
+| Total Parameters | 3,907,229 |
+
+### Sample Generations (15-epoch checkpoint)
+
+**Input (Financial Report):** *"The quarterly financial report for TechNova indicates revenue of $2500M, representing a 15% increase year over year..."*
+
+- **Greedy:** `Technova reported hit .9m revenue, increase increase .2 yoy with 754 operating margin.`
+- **Beam (w=5):** `Technova reported hit .9m revenue, increase increase growth yoy with .7 operating margin.`
+
+**Input (Product Spec):** *"The ProMax X1 by CloudPeak features a 8-core processor, 6000mAh battery..."*
+
+- **Greedy:** `New promax x1 by cloudpeak processor 8-core processor battery launching from at.`
+- **Beam (w=5):** `New promax x1 by cloudpeak processor 8-core 6000mah battery launching from at.`
+
+**Input (Research Abstract):** *"This study examines the relationship between remote work frequency and productivity..."*
+
+- **Greedy:** `Study finds for positive correlation between remote work frequency and productivity p 0.001 using regression analysis.`
+
+The model consistently captures the correct entities, numerical values, and domain vocabulary.
+The attention heatmaps in [`demo.ipynb`](demo.ipynb) visualize exactly which source tokens the decoder attended to at each step — a diagonal pattern confirms the model learned meaningful source→target alignment rather than memorizing n-grams.
+
+### Pretrained Weights
+
+Download `best_model.pt` (47 MB) from the [latest GitHub Release](https://github.com/Reethika30/nlp-seq2seq-docgen/releases) and place it in `models/` to skip training and run inference directly.
+
+---
 
 ## Architecture
 
